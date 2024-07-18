@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Timeline of Elon Musk's Life</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #007bff;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+    .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #007bff;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        left: 50%;
+    }
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    .right::after {
+        left: -16px;
+    }
+    .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+    }
+    .content:hover {
+        background-color: #f1f1f1;
+    }
+    .date {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    @media screen and (max-width: 768px) {
+        .timeline::after {
+            left: 31px;
+        }
+        .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        .container::before, .container::after {
+            left: 60px;
+        }
+        .left::before, .right::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <div class="date">1971</div>
+            <div class="description">
+                <strong>Born:</strong> Elon Musk was born on June 28, 1971, in Pretoria, South Africa.
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <div class="date">1983</div>
+            <div class="description">
+                <strong>Early Interest in Computers:</strong> At age 12, he sold his first software, a game called Blastar.
+            </div>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <div class="date">1995</div>
+            <div class="description">
+                <strong>Zip2:</strong> Elon co-founded Zip2, a software company, which was acquired by Compaq for $307 million in 1999.
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <div class="date">1999</div>
+            <div class="description">
+                <strong>X.com and PayPal:</strong> Elon founded X.com, an online payment company, which later became PayPal and was acquired by eBay for $1.5 billion in 2002.
+            </div>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <div class="date">2002</div>
+            <div class="description">
+                <strong>SpaceX:</strong> Elon founded Space Exploration Technologies Corp. (SpaceX) with the goal of reducing space transportation costs.
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <div class="date">2004</div>
+            <div class="description">
+                <strong>Tesla Motors:</strong> Elon joined Tesla Motors, Inc. as chairman of the board and later became its CEO and product architect.
+            </div>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <div class="date">2006</div>
+            <div class="description">
+                <strong>SolarCity:</strong> Elon co-founded SolarCity, a solar energy services company, which was later acquired by Tesla, Inc.
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <div class="date">2015</div>
+            <div class="description">
+                <strong>OpenAI:</strong> Elon co-founded OpenAI, a research organization aimed at promoting and developing friendly AI.
+            </div>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <div class="date">2016</div>
+            <div class="description">
+                <strong>Neuralink and The Boring Company:</strong> Elon co-founded Neuralink, a neurotechnology company, and founded The Boring Company, a tunnel construction services company.
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <div class="date">2020</div>
+            <div class="description">
+                <strong>SpaceX and NASA:</strong> SpaceX became the first private company to send astronauts to the International Space Station (ISS).
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
